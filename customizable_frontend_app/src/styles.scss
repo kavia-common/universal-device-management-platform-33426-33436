@@ -1,0 +1,21 @@
+@use "./styles/tokens" as *;
+@use "./styles/base" as *;
+
+/* Global app styles entry. Imports tokens and base utilities. */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-family);
+}
+
+/* Utility classes */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

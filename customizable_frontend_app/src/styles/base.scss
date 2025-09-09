@@ -1,0 +1,41 @@
+/* Reset and base styles */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* Common reusable helpers */
+.card {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-8);
+  box-shadow: var(--shadow-1);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius-6);
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-outline-pink {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }

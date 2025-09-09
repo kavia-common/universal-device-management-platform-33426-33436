@@ -1,59 +1,42 @@
-# Angular
+# Customizable Frontend App (Angular 19)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+This project is an Angular 19 scaffold prepared for a highly customizable product UI:
+- Global SCSS tokens and themes (light/dark)
+- Reusable UI components (starter Button)
+- Modular structure ready for authentication, dashboard, device/profile/firmware modules
+- SSR-ready configuration
 
-## Development server
+## Getting started
 
-To start a local development server, run:
-
+Install dependencies and run the dev server:
 ```bash
-ng serve
+npm install
+npm start
 ```
+The app will be available at http://localhost:3000/.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Theming
 
-## Code scaffolding
+Themes are applied via data-theme on the <html> element:
+- src/styles/tokens.scss: base CSS variables
+- src/styles/themes/light.theme.scss and dark.theme.scss
+- ThemeService toggles theme at runtime.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Example usage in AppComponent shows theme toggle and variant buttons.
 
-```bash
-ng generate component component-name
-```
+## Structure highlights
+- src/styles.scss and styles/ folder contain tokens, base, and theme files.
+- src/app/shared/ui contains reusable UI elements (e.g., Button).
+- src/app/core/services holds services such as ThemeService.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Scripts
+- npm start: dev server (port 3000)
+- npm run build: production build
+- npm test: unit tests
 
-```bash
-ng generate --help
-```
+## Next steps
+- Add layout (header/sidebar) and feature modules (auth, dashboard, device, profile, firmware).
+- Expand reusable UI library (cards, modals, toasts, tables).
+- Wire REST API calls for backend once available.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more on Angular CLI: https://angular.dev/tools/cli

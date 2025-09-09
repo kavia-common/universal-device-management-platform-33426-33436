@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular": {
+    "customizable_frontend_app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular",
+            "outputPath": "dist/customizable_frontend_app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,7 +27,10 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/styles/tokens.scss",
+              "src/styles/themes/light.theme.scss",
+              "src/styles/themes/dark.theme.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -46,8 +49,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "8kB",
+                  "maximumError": "32kB"
                 }
               ],
               "outputHashing": "all"
@@ -64,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular:build:production"
+              "buildTarget": "customizable_frontend_app:build:production"
             },
             "development": {
-              "buildTarget": "angular:build:development"
+              "buildTarget": "customizable_frontend_app:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -95,7 +98,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
