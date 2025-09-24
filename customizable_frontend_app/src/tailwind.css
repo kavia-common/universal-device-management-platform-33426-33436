@@ -1,0 +1,5 @@
+/* Optional Tailwind entry for the main app if desired in the future.
+   Not imported by the app by default to avoid changing app build behavior. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

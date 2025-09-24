@@ -1,0 +1,7 @@
+/* Tailwind entrypoint used by Storybook only. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optionally map our library CSS variables to Tailwind layers, or leave as-is.
+   Keeping minimal to ensure utilities are available in stories. */
