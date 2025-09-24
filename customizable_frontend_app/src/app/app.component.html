@@ -1,3 +1,18 @@
-<div class="container">
+<div class="container" style="flex-direction: column; gap: 16px; padding: 24px;">
   <h1>{{ title }}</h1>
+
+  <!-- Demo integrated components from the new ui-components library -->
+  <udm-labeled-info-row
+    label="IP Address:"
+    value="192.168.1.100"
+    [soft]="true"
+    radius="8"
+  ></udm-labeled-info-row>
+
+  <udm-metric-card
+    icon="memory"
+    label="CPU Utilization:"
+    [progress]="23"
+    value="23%"
+  ></udm-metric-card>
 </div>
